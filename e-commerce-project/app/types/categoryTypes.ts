@@ -1,0 +1,1 @@
+export type categoryEntityType={name:string,imageUrl:string, productsList?:any}

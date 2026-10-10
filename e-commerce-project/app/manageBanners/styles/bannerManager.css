@@ -1,0 +1,95 @@
+.banner-manager {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.banner-manager h1 {
+    margin-bottom: 30px;
+}
+
+.banner-upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding: 25px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    margin-bottom: 40px;
+}
+
+.banner-upload-form input {
+    padding: 10px;
+}
+
+.banner-upload-form button {
+    width: fit-content;
+
+    padding: 10px 20px;
+
+    background: green;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.banner-upload-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.banner-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 25px;
+
+    margin-top: 20px;
+}
+
+.banner-item {
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 15px;
+
+    background: white;
+}
+
+.banner-item img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    border-radius: 5px;
+
+    margin-bottom: 15px;
+}
+
+.delete-banner {
+    background: #dc2626;
+
+    color: white;
+
+    border: none;
+
+    padding: 8px 15px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.delete-banner:hover {
+    background: #b91c1c;
+}

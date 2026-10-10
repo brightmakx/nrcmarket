@@ -1,0 +1,540 @@
+/* =========================================================
+   CREATE PRODUCT PAGE
+========================================================= */
+
+.main {
+    width: min(700px, 92%);
+    margin: 0 auto;
+    padding: 25px 0 60px;
+
+    color: #17201b;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+
+.main > h1 {
+    margin: 0 0 20px;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    text-transform: capitalize;
+
+    color: #17201b;
+}
+
+
+/* =========================================================
+   FORM CONTAINER
+========================================================= */
+
+.details {
+    width: 100%;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e9e6;
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.04),
+        0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   FORM GROUPS
+========================================================= */
+
+.details > p {
+    margin: 0 0 18px;
+}
+
+.details > p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.details label {
+    display: inline-block;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #35433b;
+
+    text-transform: capitalize;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.details input[type="text"],
+.details input:not([type]),
+.details input[type="number"],
+.details input[type="file"] {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border: 1px solid #d9e1dc;
+    border-radius: 8px;
+
+    background: #fbfcfb;
+
+    color: #17201b;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* focus */
+
+.details input[type="text"]:focus,
+.details input:not([type]):focus,
+.details input[type="number"]:focus,
+.details input[type="file"]:focus {
+    border-color: #049156;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(4, 145, 86, 0.10);
+}
+
+
+/* placeholder */
+
+.details input::placeholder {
+    color: #9aa59e;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+#description {
+    min-height: 80px;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   CATEGORY SELECT
+========================================================= */
+
+.details select {
+    width: 100%;
+
+    margin-top: 7px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #d9e1dc;
+    border-radius: 8px;
+
+    background-color: #fbfcfb;
+    color: #35433b;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.details select:focus {
+    border-color: #049156;
+
+    box-shadow: 0 0 0 3px rgba(4, 145, 86, 0.10);
+}
+
+
+/* =========================================================
+   FILE INPUT
+========================================================= */
+
+.details input[type="file"] {
+    padding: 8px;
+
+    background: #f7faf8;
+
+    cursor: pointer;
+}
+
+.details input[type="file"]::file-selector-button {
+    margin-right: 10px;
+
+    padding: 7px 11px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #e8f3ed;
+    color: #17613e;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.details input[type="file"]::file-selector-button:hover {
+    background: #049156;
+    color: white;
+}
+
+
+/* =========================================================
+   BUTTON ROW
+========================================================= */
+
+.details > p:last-child {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   ADD TO LIST
+========================================================= */
+
+#addToList,
+#send {
+    flex: 1;
+
+    padding: 11px 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+#addToList {
+    background: #edf2ef;
+    color: #24513b;
+}
+
+#addToList:hover {
+    background: #dfe9e3;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SEND
+========================================================= */
+
+#send {
+    background: #049156;
+    color: white;
+
+    box-shadow: 0 5px 12px rgba(4, 145, 86, 0.18);
+}
+
+#send:hover {
+    background: #037b4a;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 7px 16px rgba(4, 145, 86, 0.25);
+}
+
+#addToList:active,
+#send:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .main {
+        width: 94%;
+
+        padding-top: 18px;
+    }
+
+    .main > h1 {
+        font-size: 23px;
+    }
+
+    .details {
+        padding: 18px;
+
+        border-radius: 11px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .main {
+        width: 95%;
+
+        padding-bottom: 40px;
+    }
+
+    .main > h1 {
+        font-size: 21px;
+
+        margin-bottom: 14px;
+    }
+
+    .details {
+        padding: 15px;
+    }
+
+    .details > p {
+        margin-bottom: 15px;
+    }
+
+    .details label {
+        font-size: 13px;
+    }
+
+    .details input,
+    .details select {
+        font-size: 13px;
+    }
+
+    .details > p:last-child {
+        gap: 8px;
+    }
+
+    #addToList,
+    #send {
+        padding: 10px 8px;
+
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 370px) {
+
+    .main {
+        width: 96%;
+    }
+
+    .details {
+        padding: 12px;
+    }
+
+    .details > p:last-child {
+        flex-direction: column;
+    }
+
+    #addToList,
+    #send {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   EDIT PRODUCT
+========================================================= */
+
+.current-image {
+    margin-bottom: 18px;
+}
+
+.current-image p {
+    margin: 0 0 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #35433b;
+}
+
+.current-image img {
+    display: block;
+
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    border: 1px solid #d9e1dc;
+
+    background: #f7faf8;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   EDIT BUTTONS
+========================================================= */
+
+.edit-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+/* CANCEL */
+
+#cancel,
+#save {
+    flex: 1;
+
+    padding: 11px 15px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+#cancel {
+    border: 1px solid #d9e1dc;
+
+    background: #edf2ef;
+
+    color: #35433b;
+}
+
+
+#cancel:hover {
+    background: #dfe9e3;
+
+    transform: translateY(-1px);
+}
+
+
+/* SAVE */
+
+#save {
+    border: none;
+
+    background: #049156;
+
+    color: white;
+
+    box-shadow:
+        0 5px 12px rgba(4, 145, 86, 0.18);
+}
+
+
+#save:hover {
+    background: #037b4a;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 16px rgba(4, 145, 86, 0.25);
+}
+
+
+#save:active,
+#cancel:active {
+    transform: translateY(0);
+}
+
+
+/* DISABLED */
+
+#save:disabled {
+    background: #b8c0bb;
+
+    color: #f5f5f5;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .current-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+
+@media (max-width: 370px) {
+
+    .edit-buttons {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    #cancel,
+    #save {
+        width: 100%;
+    }
+
+}
+

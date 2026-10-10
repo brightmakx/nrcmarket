@@ -1,0 +1,338 @@
+/* =========================================================
+SPECIAL OFFERS
+========================================================= */
+
+.special-offers {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+    padding: 20px 24px 40px;
+}
+
+
+/* =========================================================
+CONTENT
+========================================================= */
+
+.special-offers-content {
+    position: relative;
+
+    width: 100%;
+    min-height: 270px;
+
+    padding: 45px 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #0d3320,
+            #175c37,
+            #20804c
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+TEXT
+========================================================= */
+
+.special-offers-text {
+    position: relative;
+    z-index: 2;
+
+    max-width: 520px;
+}
+
+.special-offers-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #8de5ad;
+}
+
+.special-offers-text h2 {
+    margin: 0 0 12px;
+
+    font-size: 34px;
+    font-weight: 800;
+
+    line-height: 1.15;
+}
+
+.special-offers-text p {
+    margin: 0 0 24px;
+
+    max-width: 450px;
+
+    color: #c9ead5;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+BUTTON
+========================================================= */
+
+.special-offers-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #124529;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        gap 0.2s ease;
+}
+
+.special-offers-button span {
+    font-size: 17px;
+}
+
+.special-offers-button:hover {
+    transform: translateY(-2px);
+
+    gap: 11px;
+}
+
+
+/* =========================================================
+DECORATION
+========================================================= */
+
+.special-offers-decoration {
+    position: absolute;
+
+    right: 65px;
+
+    width: 220px;
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    transform: rotate(-12deg);
+}
+
+.special-offers-decoration::before {
+    content: "";
+
+    position: absolute;
+
+    width: 165px;
+    height: 165px;
+
+    border-radius: 50%;
+
+    border: 2px dashed rgba(255, 255, 255, 0.25);
+}
+
+.special-offers-decoration span {
+    position: relative;
+
+    font-size: 38px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .special-offers {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .special-offers-content {
+        padding: 40px;
+    }
+
+    .special-offers-decoration {
+        right: 40px;
+
+        width: 190px;
+        height: 190px;
+    }
+
+    .special-offers-decoration::before {
+        width: 140px;
+        height: 140px;
+    }
+
+    .special-offers-decoration span {
+        font-size: 32px;
+    }
+}
+
+
+/* =========================================================
+SMALL TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .special-offers {
+        padding: 16px 12px 35px;
+    }
+
+    .special-offers-content {
+        min-height: 250px;
+
+        padding: 35px 30px;
+    }
+
+    .special-offers-text {
+        max-width: 430px;
+    }
+
+    .special-offers-text h2 {
+        font-size: 29px;
+    }
+
+    .special-offers-decoration {
+        right: 25px;
+
+        width: 160px;
+        height: 160px;
+    }
+
+    .special-offers-decoration::before {
+        width: 120px;
+        height: 120px;
+    }
+
+    .special-offers-decoration span {
+        font-size: 27px;
+    }
+}
+
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .special-offers {
+        padding: 14px 8px 30px;
+    }
+
+    .special-offers-content {
+        min-height: 300px;
+
+        padding: 30px 22px;
+
+        border-radius: 14px;
+    }
+
+    .special-offers-text {
+        max-width: 100%;
+    }
+
+    .special-offers-label {
+        font-size: 10px;
+
+        letter-spacing: 1.6px;
+    }
+
+    .special-offers-text h2 {
+        max-width: 260px;
+
+        font-size: 26px;
+    }
+
+    .special-offers-text p {
+        max-width: 280px;
+
+        font-size: 13px;
+    }
+
+    .special-offers-decoration {
+        right: -45px;
+        bottom: -45px;
+
+        width: 160px;
+        height: 160px;
+    }
+
+    .special-offers-decoration::before {
+        width: 120px;
+        height: 120px;
+    }
+
+    .special-offers-decoration span {
+        font-size: 25px;
+    }
+}
+
+
+/* =========================================================
+VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 370px) {
+
+    .special-offers {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .special-offers-content {
+        padding: 27px 18px;
+    }
+
+    .special-offers-text h2 {
+        font-size: 23px;
+    }
+
+    .special-offers-text p {
+        font-size: 12px;
+    }
+
+    .special-offers-button {
+        padding: 10px 15px;
+
+        font-size: 13px;
+    }
+}

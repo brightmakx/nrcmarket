@@ -1,0 +1,461 @@
+ /* =========================================================
+   OFFERS PAGE
+========================================================= */
+
+.offers-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 35px 25px 80px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f1f8f4 0px,
+            #f7f8fa 320px
+        );
+
+    color: #17201b;
+}
+
+
+/* =========================================================
+   OFFERS HEADER
+========================================================= */
+
+.offers-header {
+    position: relative;
+
+    width: min(1200px, 100%);
+
+    margin: 0 auto 35px;
+
+    padding: 35px 40px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #063d28,
+            #087747
+        );
+
+    box-shadow:
+        0 10px 25px rgba(0, 70, 40, 0.12);
+}
+
+
+/* decorative circles */
+
+.offers-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -70px;
+    top: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.offers-header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: 100px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.offers-back {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    padding: 7px 12px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.25);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.offers-back:hover {
+    background:
+        rgba(255, 255, 255, 0.16);
+
+    transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   HEADER CONTENT
+========================================================= */
+
+.offers-header h1 {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+}
+
+.offers-header p {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 550px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SECTION INTRO
+========================================================= */
+
+.offers-section-header {
+    width: min(1200px, 100%);
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.offers-section-title {
+    margin: 0;
+
+    color: #26332c;
+
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.offers-count {
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    background: #e4f3ea;
+
+    color: #087747;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PRODUCTS GRID
+========================================================= */
+
+.offers-grid {
+    width: min(1200px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   OFFER CARD WRAPPER
+========================================================= */
+
+.offer-product {
+    position: relative;
+}
+
+
+/* =========================================================
+   OFFER BADGE
+========================================================= */
+
+.offer-badge {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    z-index: 5;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    background: #e53935;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   NO OFFERS
+========================================================= */
+
+.offers-message {
+    width: min(700px, 100%);
+
+    margin: 60px auto;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e4ebe6;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.offers-message::before {
+    content: "🏷️";
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 42px;
+}
+
+.offers-message h2 {
+    margin: 0 0 8px;
+
+    color: #26332c;
+
+    font-size: 22px;
+}
+
+.offers-message p {
+    margin: 0;
+
+    color: #7a847e;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .offers-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 15px;
+    }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .offers-page {
+        padding: 25px 15px 65px;
+
+        background:
+            linear-gradient(
+                180deg,
+                #f1f8f4 0px,
+                #f7f8fa 280px
+            );
+    }
+
+    .offers-header {
+        padding: 28px 25px;
+
+        margin-bottom: 28px;
+
+        border-radius: 15px;
+    }
+
+    .offers-header h1 {
+        font-size: 30px;
+    }
+
+    .offers-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .offers-page {
+        padding: 20px 10px 50px;
+    }
+
+    .offers-header {
+        padding: 25px 20px;
+
+        margin-bottom: 24px;
+
+        border-radius: 14px;
+    }
+
+    .offers-header h1 {
+        font-size: 26px;
+    }
+
+    .offers-header p {
+        font-size: 13px;
+    }
+
+    .offers-section-header {
+        margin-bottom: 13px;
+    }
+
+    .offers-section-title {
+        font-size: 17px;
+    }
+
+    .offers-grid {
+        gap: 9px;
+    }
+
+    .offer-badge {
+        top: 9px;
+        left: 9px;
+
+        padding: 4px 7px;
+
+        font-size: 9px;
+    }
+
+    .offers-message {
+        margin-top: 40px;
+
+        padding: 45px 20px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 370px) {
+
+    .offers-page {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .offers-header {
+        padding: 22px 16px;
+    }
+
+    .offers-header h1 {
+        font-size: 23px;
+    }
+
+    .offers-header p {
+        font-size: 12px;
+    }
+
+    .offers-grid {
+        gap: 7px;
+    }
+
+    .offers-section-title {
+        font-size: 15px;
+    }
+
+    .offers-count {
+        font-size: 10px;
+
+        padding: 4px 8px;
+    }
+}

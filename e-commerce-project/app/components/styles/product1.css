@@ -1,0 +1,457 @@
+  css
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8ece9;
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.04),
+        0 8px 20px rgba(0, 0, 0, 0.05);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.product:hover {
+    transform: translateY(-4px);
+
+    border-color: #d7e5dc;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.07),
+        0 15px 30px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.product-image {
+    position: relative;
+
+    width: 100%;
+    height: 190px;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+
+    background: #f3f5f4;
+}
+
+.product-image .image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+    transition: transform 0.35s ease;
+}
+
+.product:hover .product-image .image {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   LOVE BUTTON
+========================================================= */
+
+.love-button {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    z-index: 2;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgb(218, 215, 210);
+    color: #0f0d0d;
+
+
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.love-button:hover {
+    color: #e63950;
+
+    background: #ffffff;
+
+    transform: scale(1.1);
+}
+
+.love-button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================================================
+   PRODUCT DETAILS
+========================================================= */
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 10px 2px 2px;
+}
+
+
+/* =========================================================
+   PRODUCT NAME
+========================================================= */
+
+.product-name {
+    margin: 0 0 4px;
+
+    min-height: 20px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #26332c;
+
+    text-transform: capitalize;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.product-details .rating {
+    margin: 0 0 4px;
+
+    min-height: 22px;
+
+    font-size: 20px;
+    line-height: 1;
+
+    color: #e0ad21;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.product-details .price {
+    margin: 2px 0 10px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #17201b;
+}
+
+
+/* =========================================================
+   QUANTITY SELECT
+========================================================= */
+
+.product-details select {
+    width: 100%;
+    height: 34px;
+
+    margin: 0 0 8px;
+
+    padding: 0 8px;
+
+    border: 1px solid #d9e2dc;
+    border-radius: 7px;
+
+    background-color: #f8faf9;
+
+    color: #26332c;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.product-details select:focus {
+    border-color: #049156;
+
+    box-shadow:
+        0 0 0 3px rgba(4, 145, 86, 0.1);
+}
+
+
+/* =========================================================
+   ADD TO CART
+========================================================= */
+
+.product .add-to-cart {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 9px 10px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #049156;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px rgba(4, 145, 86, 0.15);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.product .add-to-cart:hover {
+    background-color: #037b4a;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 14px rgba(4, 145, 86, 0.22);
+}
+
+.product .add-to-cart:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   LIKE
+========================================================= */
+
+.product-details > i {
+    margin-top: 9px;
+
+    align-self: flex-end;
+
+    cursor: pointer;
+
+    opacity: 0.75;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.product-details > i:hover {
+    opacity: 1;
+
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .product-image {
+        height: 175px;
+    }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .product {
+        padding: 7px;
+
+        border-radius: 9px;
+    }
+
+    .product-image {
+        height: 150px;
+    }
+
+    .product-name {
+        font-size: 13px;
+    }
+
+    .product-details .rating {
+        font-size: 18px;
+    }
+
+    .product-details .price {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .product {
+        padding: 6px;
+
+        border-radius: 9px;
+    }
+
+    .product-image {
+        height: 145px;
+
+        border-radius: 7px;
+    }
+
+    .product-image .image {
+        border-radius: 7px;
+    }
+
+    .product-details {
+        padding-top: 8px;
+    }
+
+    .product-name {
+        font-size: 13px;
+    }
+
+    .product-details .rating {
+        font-size: 17px;
+
+        letter-spacing: 0.5px;
+    }
+
+    .product-details .price {
+        font-size: 15px;
+
+        margin-bottom: 8px;
+    }
+
+    .product-details select {
+        height: 31px;
+
+        font-size: 12px;
+    }
+
+    .product .add-to-cart {
+        padding: 8px 5px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 370px) {
+
+    .product {
+        padding: 5px;
+
+        border-radius: 7px;
+    }
+
+    .product-image {
+        height: 120px;
+    }
+
+    .product-name {
+        font-size: 12px;
+    }
+
+    .product-details .rating {
+        font-size: 16px;
+    }
+
+    .product-details .price {
+        font-size: 14px;
+    }
+
+    .product-details select {
+        height: 29px;
+
+        padding: 0 5px;
+
+        font-size: 11px;
+    }
+
+    .product .add-to-cart {
+        padding: 7px 4px;
+
+        font-size: 11px;
+    }
+}
+  

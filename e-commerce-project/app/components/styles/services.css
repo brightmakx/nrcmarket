@@ -1,0 +1,213 @@
+
+/* ================================
+   SERVICE CARD
+================================ */
+
+.service {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ================================
+   SERVICE MEDIA
+================================ */
+
+.service-image {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    background: #f3f4f6;
+}
+
+.service-image .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* MORE LINK */
+.service-image .more {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+}
+
+.service-image .more a {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: rgba(8, 136, 29, 0.65);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.service-image .more a:hover {
+    background: #15803d;
+}
+
+
+/* ================================
+   SERVICE NAME
+================================ */
+
+.service-details {
+    padding: 16px 16px 8px;
+}
+
+.service-details h2 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+
+/* ================================
+   PROVIDER
+================================ */
+
+.provider-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px 16px;
+}
+
+
+/* PROVIDER IMAGE */
+
+.profile-image-container {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #f3f4f6;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* PROVIDER DETAILS */
+
+.profile-details {
+    min-width: 0;
+    flex: 1;
+}
+
+.service-provider-name {
+    margin: 0 0 3px;
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* RATING */
+
+.service-provider-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.service-rating-stars {
+    display: flex;
+    gap: 1px;
+}
+
+.service-rating-star {
+    color: #d1d5db;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.service-rating-star.filled {
+    color: #f59e0b;
+}
+
+.service-rating-number {
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* ================================
+   BOOK NOW
+================================ */
+
+.book-now-btn {
+    width: calc(100% - 32px);
+    margin: 0 16px 16px;
+    min-height: 42px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #15803d;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.book-now-btn:hover {
+    background: #166534;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media screen and (max-width: 700px) {
+
+    .service-image {
+        height: 200px;
+    }
+
+    .service-details {
+        padding: 15px 14px 7px;
+    }
+
+    .service-details h2 {
+        font-size: 17px;
+    }
+
+    .provider-profile {
+        padding: 9px 14px 14px;
+    }
+
+    .book-now-btn {
+        width: calc(100% - 28px);
+        margin: 0 14px 14px;
+    }
+
+}
+

@@ -1,0 +1,254 @@
+/* =========================================================
+WHY MARKET
+========================================================= */
+
+.why-market {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 45px 24px 55px;
+
+    color: #17201b;
+}
+
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.why-market-header {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+.why-market-header > span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #3ca866;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.why-market-header h2 {
+    margin: 0 0 12px;
+
+    font-size: 28px;
+    font-weight: 750;
+
+    color: #17201b;
+}
+
+.why-market-header p {
+    margin: 0;
+
+    color: #68736c;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+FEATURE ITEMS
+========================================================= */
+
+.why-market-items {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+ITEM
+========================================================= */
+
+.why-market-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 22px 18px;
+
+    border: 1px solid #e1e9e4;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.why-market-item:hover {
+    transform: translateY(-3px);
+
+    border-color: #b8d8c3;
+
+    box-shadow: 0 8px 25px rgba(22, 71, 42, 0.07);
+}
+
+
+/* =========================================================
+ICON
+========================================================= */
+
+.why-market-icon {
+    flex-shrink: 0;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e5f5eb;
+
+    color: #299454;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+TEXT
+========================================================= */
+
+.why-market-item h3 {
+    margin: 2px 0 6px;
+
+    color: #17201b;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.why-market-item p {
+    margin: 0;
+
+    color: #68736c;
+
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .why-market {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .why-market-items {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+SMALL TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .why-market {
+        padding: 35px 12px 45px;
+    }
+
+    .why-market-header {
+        margin-bottom: 28px;
+    }
+
+    .why-market-header h2 {
+        font-size: 25px;
+    }
+
+    .why-market-items {
+        gap: 12px;
+    }
+}
+
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .why-market {
+        padding: 30px 8px 40px;
+    }
+
+    .why-market-header {
+        margin-bottom: 22px;
+    }
+
+    .why-market-header h2 {
+        font-size: 22px;
+    }
+
+    .why-market-header p {
+        font-size: 13px;
+    }
+
+    .why-market-items {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .why-market-item {
+        padding: 18px 15px;
+    }
+}
+
+
+/* =========================================================
+VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 370px) {
+
+    .why-market {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .why-market-header h2 {
+        font-size: 20px;
+    }
+
+    .why-market-item h3 {
+        font-size: 14px;
+    }
+
+    .why-market-item p {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,1144 @@
+Response
+/* =========================
+   COMPLETED
+========================= */
+
+.service-completed {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #16a34a;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  padding: 12px 14px;
+
+  border: 1px solid #bbf7d0;
+
+  border-radius: 9px;
+
+  background: #f0fdf4;
+
+}
+
+.completed-mark {
+
+  width: 24px;
+
+  height: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #16a34a;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.add-service-page {
+
+  min-height: 100vh;
+
+  padding: 50px 20px;
+
+  background: #f5f7fa;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+}
+
+.form-container {
+
+  width: 100%;
+
+  max-width: 850px;
+
+  background: #ffffff;
+
+  padding: 42px;
+
+  border-radius: 18px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.page-header {
+
+  margin-bottom: 35px;
+
+}
+
+.page-header h1 {
+
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+
+}
+
+.page-header p {
+
+  margin: 8px 0 0;
+
+  color: #6b7280;
+
+  font-size: 15px;
+
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress {
+
+  display: flex;
+
+  align-items: center;
+
+  margin-bottom: 40px;
+
+}
+
+.progress-step {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #9ca3af;
+
+}
+
+.progress-step span {
+
+  width: 32px;
+
+  height: 32px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f3f4f6;
+
+  color: #9ca3af;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+}
+
+.progress-step p {
+
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+}
+
+.progress-step.active {
+
+  color: #16a34a;
+
+}
+
+.progress-step.active span {
+
+  background: #16a34a;
+
+  color: #ffffff;
+
+}
+
+.progress-step.completed {
+
+  color: #16a34a;
+
+}
+
+.progress-step.completed span {
+
+  background: #dcfce7;
+
+  color: #16a34a;
+
+}
+
+.progress-line {
+
+  flex: 1;
+
+  height: 1px;
+
+  margin: 0 18px;
+
+  background: #e5e7eb;
+
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 28px;
+
+}
+
+.form-group {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+}
+
+.form-group > label {
+
+  color: #1f2937;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+.form-group label span {
+
+  color: #ef4444;
+
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  padding: 13px 15px;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+
+    border-color 0.2s ease,
+
+    box-shadow 0.2s ease;
+
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+
+  height: 48px;
+
+}
+
+.form-group textarea {
+
+  min-height: 150px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="number"]::placeholder,
+.form-group textarea::placeholder {
+
+  color: #9ca3af;
+
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group textarea:focus {
+
+  border-color: #16a34a;
+
+  box-shadow:
+
+    0 0 0 3px rgba(22, 163, 74, 0.1);
+
+}
+
+
+/* =========================
+   MEDIA UPLOAD
+========================= */
+
+.media-upload {
+
+  position: relative;
+
+  width: 100%;
+
+}
+
+.media-upload input[type="file"] {
+
+  position: absolute;
+
+  width: 100%;
+
+  height: 100%;
+
+  inset: 0;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+  z-index: 2;
+
+}
+
+.media-upload-label {
+
+  min-height: 190px;
+
+  border: 2px dashed #d1d5db;
+
+  border-radius: 14px;
+
+  background: #fafafa;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  gap: 7px;
+
+  cursor: pointer;
+
+  transition:
+
+    border-color 0.2s ease,
+
+    background 0.2s ease,
+
+    transform 0.2s ease;
+
+}
+
+.media-upload-label:hover {
+
+  border-color: #16a34a;
+
+  background: #f0fdf4;
+
+}
+
+.media-upload-label strong {
+
+  color: #1f2937;
+
+  font-size: 14px;
+
+  max-width: 90%;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+}
+
+.media-upload-label span {
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+}
+
+.media-upload-label small {
+
+  color: #9ca3af;
+
+  font-size: 12px;
+
+}
+
+.upload-icon {
+
+  width: 46px;
+
+  height: 46px;
+
+  border-radius: 50%;
+
+  background: #f0fdf4;
+
+  color: #16a34a;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 26px;
+
+  font-weight: 400;
+
+  margin-bottom: 5px;
+
+}
+
+
+/* =========================
+   CONDITIONS
+========================= */
+
+.conditions-header {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+}
+
+.conditions-header > div {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+}
+
+.conditions-header label {
+
+  color: #1f2937;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+.conditions-header small {
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+}
+
+.add-condition {
+
+  border: none;
+
+  background: transparent;
+
+  color: #16a34a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 5px 0;
+
+  white-space: nowrap;
+
+}
+
+.add-condition:hover {
+
+  color: #15803d;
+
+  text-decoration: underline;
+
+}
+
+
+/* =========================
+   CONDITION INPUT
+========================= */
+
+.condition-input-wrapper {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+}
+
+.condition-input-wrapper input {
+
+  flex: 1;
+
+  height: 46px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 9px;
+
+  padding: 0 14px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+
+    border-color 0.2s ease,
+
+    box-shadow 0.2s ease;
+
+}
+
+.condition-input-wrapper input::placeholder {
+
+  color: #9ca3af;
+
+}
+
+.condition-input-wrapper input:focus {
+
+  border-color: #16a34a;
+
+  box-shadow:
+
+    0 0 0 3px rgba(22, 163, 74, 0.08);
+
+}
+
+
+/* =========================
+   ADD CONDITION BUTTON
+========================= */
+
+.add-condition-button {
+
+  height: 46px;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #16a34a;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+
+    background 0.2s ease,
+
+    transform 0.15s ease,
+
+    box-shadow 0.2s ease;
+
+}
+
+.add-condition-button:hover {
+
+  background: #15803d;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+
+    0 4px 10px rgba(22, 163, 74, 0.2);
+
+}
+
+.add-condition-button:active {
+
+  transform: translateY(0);
+
+}
+
+
+/* =========================
+   SAVED CONDITIONS
+========================= */
+
+.saved-conditions {
+
+  margin-top: 18px;
+
+  padding: 16px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  background: #fafafa;
+
+}
+
+.saved-conditions-title {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+  color: #374151;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+}
+
+.condition-count {
+
+  min-width: 24px;
+
+  height: 24px;
+
+  padding: 0 7px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #dcfce7;
+
+  color: #15803d;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+}
+
+.conditions-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+}
+
+.saved-condition {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-height: 46px;
+
+  padding: 8px 10px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  transition:
+
+    border-color 0.2s ease,
+
+    box-shadow 0.2s ease;
+
+}
+
+.saved-condition:hover {
+
+  border-color: #d1d5db;
+
+  box-shadow:
+
+    0 2px 7px rgba(0, 0, 0, 0.04);
+
+}
+
+.condition-check {
+
+  width: 25px;
+
+  height: 25px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #dcfce7;
+
+  color: #16a34a;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+}
+
+.saved-condition-text {
+
+  flex: 1;
+
+  color: #374151;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+
+}
+
+.saved-condition .remove-condition {
+
+  width: 30px;
+
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #9ca3af;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+
+    color 0.2s ease,
+
+    background 0.2s ease;
+
+}
+
+.saved-condition .remove-condition:hover {
+
+  background: #fef2f2;
+
+  color: #dc2626;
+
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.error-message {
+
+  margin-bottom: 25px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 9px;
+
+  background: #fef2f2;
+
+  color: #b91c1c;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.form-actions {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  padding-top: 10px;
+
+  border-top: 1px solid #e5e7eb;
+
+}
+
+.submit-button {
+
+  min-width: 150px;
+
+  height: 46px;
+
+  padding: 0 22px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #16a34a;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+
+    background 0.2s ease,
+
+    transform 0.15s ease,
+
+    box-shadow 0.2s ease;
+
+}
+
+.submit-button:hover:not(:disabled) {
+
+  background: #15803d;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+
+    0 5px 12px rgba(22, 163, 74, 0.2);
+
+}
+
+.submit-button:active:not(:disabled) {
+
+  transform: translateY(0);
+
+}
+
+.submit-button:disabled {
+
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+
+  .add-service-page {
+
+    padding: 25px 14px;
+
+  }
+
+  .form-container {
+
+    padding: 30px 22px;
+
+    border-radius: 14px;
+
+  }
+
+  .page-header h1 {
+
+    font-size: 26px;
+
+  }
+
+  .progress-step p {
+
+    display: none;
+
+  }
+
+  .progress-line {
+
+    margin: 0 12px;
+
+  }
+
+  .conditions-header {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+  }
+
+  .add-condition {
+
+    padding-left: 0;
+
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .add-service-page {
+
+    padding: 10px;
+
+  }
+
+  .form-container {
+
+    padding: 24px 16px;
+
+    border-radius: 12px;
+
+  }
+
+  .page-header {
+
+    margin-bottom: 28px;
+
+  }
+
+  .page-header h1 {
+
+    font-size: 24px;
+
+  }
+
+  .page-header p {
+
+    font-size: 14px;
+
+  }
+
+  .progress {
+
+    margin-bottom: 30px;
+
+  }
+
+  .progress-step span {
+
+    width: 29px;
+
+    height: 29px;
+
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="number"] {
+
+    height: 46px;
+
+  }
+
+  .form-group textarea {
+
+    min-height: 120px;
+
+  }
+
+  .media-upload-label {
+
+    min-height: 160px;
+
+  }
+
+  .condition-input-wrapper {
+
+    align-items: stretch;
+
+  }
+
+  .condition-input-wrapper input {
+
+    min-width: 0;
+
+  }
+
+  .add-condition-button {
+
+    padding: 0 14px;
+
+  }
+
+  .saved-conditions {
+
+    padding: 12px;
+
+  }
+
+  .saved-condition {
+
+    align-items: flex-start;
+
+    padding: 9px;
+
+  }
+
+  .condition-check {
+
+    margin-top: 1px;
+
+  }
+
+  .saved-condition-text {
+
+    font-size: 13px;
+
+  }
+
+  .service-completed {
+
+    font-size: 14px;
+
+  }
+
+}

@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Example Test Suite > add(1, 1) 1`] = `2`;
+
+exports[`Example Test Suite > add(1, 2) 1`] = `3`;
+
+exports[`Example Test Suite > add(2, 1) 1`] = `3`;

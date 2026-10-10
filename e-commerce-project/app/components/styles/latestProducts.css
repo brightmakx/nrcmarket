@@ -1,0 +1,288 @@
+
+/* =========================================================
+PRODUCTS / LATEST PRODUCTS
+========================================================= */
+
+.latest {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+    padding: 20px 24px 50px;
+
+    color: #17201b;
+}
+
+/* =========================================================
+SECTION HEADER
+========================================================= */
+
+.latest-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+/* =========================================================
+SECTION TITLE
+========================================================= */
+
+.latest-header > h3 {
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    color: #17201b;
+}
+
+/* =========================================================
+VIEW ALL
+========================================================= */
+
+.latest-view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #17201b;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
+.latest-view-all span {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.latest-view-all:hover {
+    color: #555;
+    gap: 8px;
+}
+
+/* =========================================================
+PRODUCT GRID
+========================================================= */
+
+.latest-products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(190px, 1fr));
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .latest {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .latest-products {
+        grid-template-columns:
+            repeat(auto-fill, minmax(175px, 1fr));
+
+        gap: 14px;
+    }
+}
+
+/* =========================================================
+SMALL TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .latest {
+        padding: 16px 12px 45px;
+    }
+
+    .latest-header {
+        margin-bottom: 14px;
+    }
+
+    .latest-header > h3 {
+        font-size: 21px;
+    }
+
+    .latest-view-all {
+        font-size: 13px;
+    }
+
+    .latest-products {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .latest {
+        padding: 14px 8px 40px;
+    }
+
+    .latest-header {
+        margin-bottom: 12px;
+    }
+
+    .latest-header > h3 {
+        font-size: 19px;
+    }
+
+    .latest-view-all {
+        font-size: 12px;
+    }
+
+    .latest-view-all span {
+        font-size: 15px;
+    }
+
+    .latest-products {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+    }
+}
+
+/* =========================================================
+VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 370px) {
+
+    .latest {
+        padding: 10px 5px 35px;
+    }
+
+    .latest-header {
+        margin-bottom: 10px;
+    }
+
+    .latest-header > h3 {
+        font-size: 17px;
+    }
+
+    .latest-view-all {
+        font-size: 11px;
+    }
+
+    .latest-view-all span {
+        font-size: 14px;
+    }
+
+    .latest-products {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 7px;
+    }
+}
+
+/* =========================================================
+   OFFER PRODUCT
+========================================================= */
+
+.latest-product-offer {
+    position: relative;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   NORMAL PRODUCT
+========================================================= */
+
+.latest-product {
+    position: relative;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   OFFER BADGE
+========================================================= */
+
+.latest-offer-badge {
+    position: absolute;
+
+    top: 8px;
+    left: 8px;
+
+    z-index: 10;
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    background: #e53935;
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.6px;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.18);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .latest-offer-badge {
+        top: 7px;
+        left: 7px;
+
+        padding: 4px 7px;
+
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 370px) {
+
+    .latest-offer-badge {
+        top: 6px;
+        left: 6px;
+
+        padding: 3px 6px;
+
+        font-size: 7px;
+    }
+}

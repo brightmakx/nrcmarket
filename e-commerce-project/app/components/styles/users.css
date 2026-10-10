@@ -1,0 +1,49 @@
+.submit{
+    background-color: rgb(9, 9, 34);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+form{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+p{
+    margin-bottom: 3px;
+}
+
+form h3{
+    font-family: fantasy;
+    color: rgb(8, 8, 41);
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input{
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+form  p{
+    width: 100%;
+}
+form input{
+    width: 100%;
+}
+form button{
+    width: 100%;
+}
+#login_option{
+    width: auto;
+    margin-left: 7px;
+    background-color: rgb(115, 133, 124);
+    margin-top: 2px;
+    border-radius: 3px;
+    padding: 1px 3px;
+}
+
+

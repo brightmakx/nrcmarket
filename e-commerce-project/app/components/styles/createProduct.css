@@ -1,0 +1,54 @@
+.main{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(206, 206, 216);
+}
+h1{
+    color:rgb(87, 87, 167);
+    font-family:fantasy;
+}
+h1{
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 35%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+input{
+    border: 1px solid rgb(104, 101, 101);
+    border-radius: 4px;
+    width: 100%;
+
+}
+p{
+    width: 100%;
+}
+label{
+    width: 20%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#addToList, #send{
+    padding: 4px 10px;
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+@media (max-width: 767px){
+    .main{
+        width: 100%;
+    }
+    
+}

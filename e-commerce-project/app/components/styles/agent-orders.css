@@ -1,0 +1,567 @@
+.agent-orders-page {
+min-height: 100vh;
+padding: 45px 25px 80px;
+background: #f4f8f5;
+color: #17231b;
+}
+
+.agent-orders-container {
+width: min(1250px, 100%);
+margin: 0 auto;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.agent-orders-header {
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+gap: 25px;
+margin-bottom: 30px;
+}
+
+.agent-orders-eyebrow {
+display: block;
+margin-bottom: 8px;
+color: #287746;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 1.4px;
+}
+
+.agent-orders-header h1 {
+margin: 0;
+color: #14251a;
+font-size: 32px;
+line-height: 1.2;
+font-weight: 750;
+}
+
+.agent-orders-header p {
+margin: 8px 0 0;
+color: #748178;
+font-size: 15px;
+}
+
+.back-dashboard-button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-height: 40px;
+padding: 0 15px;
+border: 1px solid #d5e4d9;
+border-radius: 9px;
+background: #ffffff;
+color: #287746;
+font-size: 13px;
+font-weight: 700;
+text-decoration: none;
+}
+
+.back-dashboard-button:hover {
+background: #f0f7f2;
+}
+
+/* =========================
+SUMMARY
+========================= */
+
+.orders-summary {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
+margin-bottom: 22px;
+}
+
+.orders-summary-card {
+display: flex;
+align-items: center;
+gap: 14px;
+min-height: 90px;
+padding: 18px 20px;
+border: 1px solid #dfeae2;
+border-radius: 13px;
+background: #ffffff;
+}
+
+.summary-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 43px;
+height: 43px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #e7f4eb;
+color: #287746;
+font-size: 19px;
+font-weight: 800;
+}
+
+.orders-summary-card span {
+display: block;
+color: #77847b;
+font-size: 12px;
+}
+
+.orders-summary-card strong {
+display: block;
+margin-top: 4px;
+color: #1b3324;
+font-size: 23px;
+}
+
+/* =========================
+MAIN CARD
+========================= */
+
+.agent-orders-card {
+overflow: hidden;
+border: 1px solid #dfeae2;
+border-radius: 15px;
+background: #ffffff;
+}
+
+/* =========================
+TOOLBAR
+========================= */
+
+.agent-orders-toolbar {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 25px;
+padding: 23px 24px;
+border-bottom: 1px solid #e9efeb;
+}
+
+.agent-orders-toolbar h2 {
+margin: 0;
+color: #1a3022;
+font-size: 20px;
+font-weight: 720;
+}
+
+.agent-orders-toolbar p {
+margin: 6px 0 0;
+color: #7b887f;
+font-size: 13px;
+}
+
+.orders-toolbar-controls {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.orders-search {
+display: flex;
+align-items: center;
+width: 245px;
+height: 40px;
+padding: 0 12px;
+border: 1px solid #d8e4dc;
+border-radius: 9px;
+background: #ffffff;
+}
+
+.orders-search span {
+margin-right: 8px;
+color: #849188;
+font-size: 18px;
+}
+
+.orders-search input {
+width: 100%;
+border: none;
+outline: none;
+background: transparent;
+color: #27382d;
+font-size: 12px;
+}
+
+.orders-search input::placeholder {
+color: #a0aaa3;
+}
+
+.orders-toolbar-controls select {
+height: 40px;
+padding: 0 11px;
+border: 1px solid #d8e4dc;
+border-radius: 9px;
+outline: none;
+background: #ffffff;
+color: #435449;
+font-size: 12px;
+cursor: pointer;
+}
+
+/* =========================
+ORDER ROW
+========================= */
+
+.agent-order-list {
+display: flex;
+flex-direction: column;
+}
+
+.agent-order-row {
+display: grid;
+grid-template-columns: 1.4fr 1.2fr 1fr 110px 95px 125px;
+align-items: center;
+gap: 20px;
+min-height: 88px;
+padding: 14px 24px;
+border-bottom: 1px solid #edf2ee;
+}
+
+.agent-order-row:last-child {
+border-bottom: none;
+}
+
+.agent-order-number {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.agent-order-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #e8f4eb;
+color: #287746;
+font-size: 14px;
+font-weight: 800;
+}
+
+.agent-order-number strong,
+.agent-order-number span {
+display: block;
+}
+
+.agent-order-number strong {
+color: #203629;
+font-size: 13px;
+}
+
+.agent-order-number span {
+margin-top: 4px;
+color: #939d97;
+font-size: 10px;
+}
+
+.agent-customer span,
+.agent-customer strong,
+.agent-customer small {
+display: block;
+}
+
+.agent-customer span,
+.agent-location span {
+margin-bottom: 4px;
+color: #99a39d;
+font-size: 10px;
+text-transform: uppercase;
+letter-spacing: 0.3px;
+}
+
+.agent-customer strong,
+.agent-location strong {
+color: #35483c;
+font-size: 12px;
+}
+
+.agent-customer small {
+margin-top: 3px;
+color: #89958d;
+font-size: 10px;
+}
+
+.agent-order-total span,
+.agent-order-total strong {
+display: block;
+}
+
+.agent-order-total span {
+color: #8d9891;
+font-size: 11px;
+}
+
+.agent-order-total strong {
+margin-top: 4px;
+color: #263b2d;
+font-size: 12px;
+}
+
+.agent-status-badge {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-height: 27px;
+padding: 0 9px;
+border-radius: 20px;
+font-size: 10px;
+font-weight: 750;
+}
+
+.agent-status-pending {
+background: #eef5df;
+color: #69832f;
+}
+
+.agent-status-delivered {
+background: #e6f5eb;
+color: #277746;
+}
+
+.agent-order-action {
+display: flex;
+justify-content: flex-end;
+}
+
+.open-order-button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 7px;
+min-height: 35px;
+padding: 0 12px;
+border-radius: 8px;
+background: #287746;
+color: #ffffff;
+font-size: 11px;
+font-weight: 700;
+text-decoration: none;
+white-space: nowrap;
+transition: background 0.2s ease;
+}
+
+.open-order-button:hover {
+background: #205f38;
+}
+
+/* =========================
+EMPTY STATE
+========================= */
+
+.agent-orders-empty {
+padding: 70px 20px;
+text-align: center;
+}
+
+.empty-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 55px;
+height: 55px;
+margin: 0 auto 15px;
+border-radius: 50%;
+background: #eaf4ed;
+color: #287746;
+font-size: 22px;
+}
+
+.agent-orders-empty h3 {
+margin: 0;
+color: #263b2d;
+font-size: 17px;
+}
+
+.agent-orders-empty p {
+margin: 7px 0 15px;
+color: #849088;
+font-size: 13px;
+}
+
+.agent-orders-empty button {
+min-height: 35px;
+padding: 0 14px;
+border: none;
+border-radius: 8px;
+background: #287746;
+color: #ffffff;
+font-size: 12px;
+font-weight: 700;
+cursor: pointer;
+}
+
+/* =========================
+INFORMATION NOTE
+========================= */
+
+.agent-orders-note {
+display: flex;
+align-items: flex-start;
+gap: 12px;
+margin-top: 18px;
+padding: 16px 18px;
+border: 1px solid #dce9df;
+border-radius: 12px;
+background: #f0f8f3;
+}
+
+.note-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 28px;
+height: 28px;
+flex-shrink: 0;
+border-radius: 50%;
+background: #dcefe2;
+color: #287746;
+font-size: 12px;
+font-weight: 800;
+}
+
+.agent-orders-note strong {
+display: block;
+color: #285c3a;
+font-size: 12px;
+}
+
+.agent-orders-note p {
+margin: 4px 0 0;
+color: #6e8075;
+font-size: 11px;
+line-height: 1.5;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 1150px) {
+.agent-order-row {
+grid-template-columns: 1.4fr 1fr 1fr 100px 115px;
+}
+
+  
+.agent-order-action {
+    grid-column: 5;
+}
+
+.agent-order-status {
+    grid-column: 4;
+}
+
+.agent-location {
+    display: none;
+}
+  
+
+}
+
+@media (max-width: 900px) {
+.agent-orders-toolbar {
+flex-direction: column;
+}
+
+  
+.orders-toolbar-controls {
+    width: 100%;
+}
+
+.orders-search {
+    flex: 1;
+    width: auto;
+}
+
+.agent-order-row {
+    grid-template-columns: 1fr auto;
+    gap: 14px;
+    padding: 18px 20px;
+}
+
+.agent-customer {
+    grid-column: 1;
+}
+
+.agent-order-total {
+    grid-column: 1;
+}
+
+.agent-order-status {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.agent-order-action {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+  
+
+}
+
+@media (max-width: 650px) {
+.agent-orders-page {
+padding: 30px 16px 60px;
+}
+
+  
+.agent-orders-header {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.agent-orders-header h1 {
+    font-size: 28px;
+}
+
+.back-dashboard-button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.orders-summary {
+    grid-template-columns: 1fr;
+}
+
+.orders-toolbar-controls {
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.orders-toolbar-controls select {
+    width: 100%;
+}
+
+.agent-order-row {
+    grid-template-columns: 1fr;
+}
+
+.agent-order-status,
+.agent-order-action,
+.agent-customer,
+.agent-order-total {
+    grid-column: 1;
+    grid-row: auto;
+}
+
+.agent-order-status {
+    justify-content: flex-start;
+}
+
+.agent-order-action {
+    justify-content: flex-start;
+}
+
+.open-order-button {
+    width: 100%;
+}
+
+.agent-orders-note {
+    padding: 14px;
+}
+  
+
+}

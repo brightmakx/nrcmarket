@@ -1,0 +1,559 @@
+/* =========================================
+   LUANAR NRC MARKETPLACE AUTH PAGE
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+.auth-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 40px 20px;
+    
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(30, 120, 70, 0.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(20, 90, 55, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #e9f7ee 0%,
+            #d5efdf 45%,
+            #f4faf6 100%
+        );
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================
+   BACKGROUND DECORATIONS
+   ========================================= */
+
+.background-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(2px);
+}
+
+.circle-one {
+    width: 350px;
+    height: 350px;
+
+    top: -150px;
+    left: -120px;
+
+    background: rgba(24, 110, 61, 0.15);
+}
+
+.circle-two {
+    width: 450px;
+    height: 450px;
+
+    bottom: -220px;
+    right: -150px;
+
+    background: rgba(40, 140, 80, 0.13);
+}
+
+
+/* =========================================
+   LOGIN CARD
+   ========================================= */
+
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+
+    position: relative;
+    z-index: 2;
+
+    padding: 38px 40px 30px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(20, 80, 45, 0.18),
+        0 5px 20px rgba(20, 80, 45, 0.08);
+
+    backdrop-filter: blur(15px);
+
+    animation: cardAppear 0.6s ease;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.logo-container {
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 50%;
+
+    padding: 8px;
+
+    box-shadow:
+        0 8px 25px rgba(25, 100, 55, 0.15);
+
+    border: 3px solid rgba(31, 112, 63, 0.12);
+}
+
+.university-logo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.auth-header {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+.auth-header h1 {
+    margin: 0;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    color: #64756a;
+}
+
+.auth-header h2 {
+    margin: 4px 0 8px;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+
+    color: #176b3b;
+}
+
+.auth-header p {
+    margin: 0;
+
+    color: #7a8980;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   INPUT GROUP
+   ========================================= */
+
+.input-group {
+    margin-bottom: 19px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+    font-weight: 650;
+
+    color: #34493b;
+}
+
+
+/* =========================================
+   INPUT WRAPPER
+   ========================================= */
+
+.input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 17px;
+
+    opacity: 0.65;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 16px 0 45px;
+
+    border: 1.5px solid #d7e4db;
+
+    border-radius: 12px;
+
+    background: #f8fbf9;
+
+    color: #20352a;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.input-wrapper input::placeholder {
+    color: #9aa9a0;
+}
+
+.input-wrapper input:hover {
+    border-color: #b5cdbd;
+}
+
+.input-wrapper input:focus {
+    background: white;
+
+    border-color: #21804a;
+
+    box-shadow:
+        0 0 0 4px rgba(33, 128, 74, 0.10);
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+   ========================================= */
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 12px 14px;
+
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+
+    background: #fff1f1;
+
+    border: 1px solid #ffd2d2;
+
+    color: #c73737;
+
+    font-size: 13px;
+
+    animation: shake 0.3s ease;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+   ========================================= */
+
+.submit {
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #176b3b,
+            #239653
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    box-shadow:
+        0 8px 20px rgba(23, 107, 59, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+.submit:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.05);
+
+    box-shadow:
+        0 12px 25px rgba(23, 107, 59, 0.32);
+}
+
+.submit:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 5px 12px rgba(23, 107, 59, 0.25);
+}
+
+
+/* =========================================
+   SWITCH LOGIN / SIGNUP
+   ========================================= */
+
+.switch-container {
+    margin-top: 23px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+
+    color: #718078;
+
+    font-size: 13px;
+}
+
+#login_option {
+    border: none;
+
+    background: none;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    color: #176b3b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: color 0.2s ease;
+}
+
+#login_option:hover {
+    color: #0e4928;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   DIVIDER
+   ========================================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 25px 0 15px;
+
+    color: #a5b3aa;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background: #e2eae5;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer-text {
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    color: #a0ada5;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .auth-page {
+        padding: 20px 14px;
+    }
+
+    .auth-card {
+        padding: 30px 22px 25px;
+
+        border-radius: 20px;
+    }
+
+    .logo-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .auth-header h2 {
+        font-size: 26px;
+    }
+
+    .input-wrapper input {
+        height: 50px;
+    }
+
+    .submit {
+        height: 50px;
+    }
+}
+.page-content:has(.auth-page) {
+    padding-top: 0 !important;
+}
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+    font-size: 18px;
+
+    padding: 5px;
+}
+
+.password-toggle:hover {
+    opacity: 0.7;
+}

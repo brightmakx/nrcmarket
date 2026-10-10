@@ -1,0 +1,359 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Order {
+  id              Int                @id @default(autoincrement())
+  createdAt       DateTime           @default(now())
+  quantity        Int
+  cost            Decimal            @db.Decimal(10, 2)
+  userId          String
+  status          Status             @default(PENDING)
+  agentId         String?
+  updatedAt       DateTime           @default(now()) @updatedAt
+  parentOrderId   Int?
+  sellerId        String?
+  deliveredBy     Agent?             @relation(fields: [agentId], references: [id])
+  parentOrders    ParentOrder?       @relation(fields: [parentOrderId], references: [id], onDelete: Cascade)
+  seller          User?              @relation("SellerOrders", fields: [sellerId], references: [id])
+  user            User               @relation(fields: [userId], references: [id])
+  productReviews  ProductReview[]
+  orderedProducts ordered_products[]
+
+  @@index([userId])
+  @@index([status])
+}
+
+model Category {
+  id          Int       @id @default(autoincrement())
+  name        String    @unique
+  imageUrl    String
+  description String?
+  products    Product[]
+}
+
+model Product {
+  id            Int                      @id @default(autoincrement())
+  name          String
+  categoryId    Int
+  imageUrl      String
+  price         Decimal                  @db.Decimal(10, 2)
+  rating        Decimal                  @default(0) @db.Decimal(3, 2)
+  quantity      Int
+  description   String?
+  ownerId       String?
+  onOffer       Boolean?                 @default(false)
+  search_vector Unsupported("tsvector")? @default(dbgenerated("(setweight(to_tsvector('english'::regconfig, COALESCE(name, ''::text)), 'A'::\"char\") || setweight(to_tsvector('english'::regconfig, COALESCE(description, ''::text)), 'B'::\"char\"))"))
+  category      Category                 @relation(fields: [categoryId], references: [id])
+  owner         User?                    @relation(fields: [ownerId], references: [id])
+  reviews       ProductReview[]
+  order         ordered_products[]
+
+  @@index([search_vector], map: "products_search_idx", type: Gin)
+  @@index([name(ops: raw("gin_trgm_ops"))], map: "products_name_trgm_idx", type: Gin)
+}
+
+model ordered_products {
+  id             Int     @id @default(autoincrement())
+  orderId        Int
+  productId      Int
+  orderTimePrice Decimal @db.Decimal(10, 2)
+  quantity       Int     @default(1)
+  order          Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product        Product @relation(fields: [productId], references: [id])
+
+  @@unique([orderId, productId])
+  @@index([productId])
+}
+
+model Service {
+  id          Int               @id @default(autoincrement())
+  name        String
+  description String
+  providerId  String?
+  conditions  String[]
+  fee         Decimal?          @db.Decimal(10, 2)
+  bookings    Booking[]
+  images      Image[]
+  provider    User?             @relation(fields: [providerId], references: [id])
+  providers   ServiceProvider[]
+  reviews     ServiceReview[]
+  videos      Video[] 
+  search_vector Unsupported("tsvector")?
+  @@index([search_vector], map: "services_search_idx", type: Gin)
+  @@index([name(ops: raw("gin_trgm_ops"))], map: "services_name_trgm_idx", type: Gin)
+}
+
+model Video {
+  id        Int      @id @default(autoincrement())
+  name      String
+  serviceId Int
+  createdAt DateTime @default(now())
+  service   Service  @relation(fields: [serviceId], references: [id])
+}
+
+model Image {
+  id                Int              @id @default(autoincrement())
+  name              String
+  serviceId         Int?
+  createdAt         DateTime         @default(now())
+  serviceProviderId Int?
+  service           Service?         @relation(fields: [serviceId], references: [id])
+  serviceProvider   ServiceProvider? @relation(fields: [serviceProviderId], references: [id])
+}
+
+model ServiceProvider {
+  id           Int             @id @default(autoincrement())
+  serviceId    Int?
+  name         String
+  email        String          @unique
+  phone        String
+  location     String
+  rating       Decimal         @default(0) @db.Decimal(3, 2)
+  userId       String          @unique
+  title        String?
+  availability String?
+  bookings     Booking[]
+  images       Image[]
+  service      Service?        @relation(fields: [serviceId], references: [id])
+  user         User            @relation(fields: [userId], references: [id])
+  reviews      ServiceReview[]
+}
+
+model User {
+  id                String             @id
+  email             String             @unique
+  phone             String?
+  location          String?
+  name              String
+  createdAt         DateTime           @default(now())
+  image             String?
+  emailVerified     Boolean            @default(false)
+  updatedAt         DateTime           @updatedAt
+  role              Role               @default(BASIC)
+  agent             Agent?
+  bookings          Booking[]
+  sellerOrders      Order[]            @relation("SellerOrders")
+  orders            Order[]
+  parentOrder       ParentOrder[]
+  products          Product[]
+  productReviews    ProductReview[]
+  services          Service[]
+  serviceProvider   ServiceProvider?
+  serviceReviews    ServiceReview[]
+  accounts          Account[]
+  sessions          Session[]
+  pushSubscriptions PushSubscription[]
+  notifications     Notification[]
+
+  @@map("user")
+}
+
+model Session {
+  id        String   @id
+  token     String   @unique
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+  ipAddress String?
+  updatedAt DateTime @updatedAt
+  userAgent String?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("session")
+}
+
+model Account {
+  id                    String    @id
+  scope                 String?
+  password              String?
+  accessToken           String?
+  accessTokenExpiresAt  DateTime?
+  accountId             String
+  createdAt             DateTime  @default(now())
+  idToken               String?
+  providerId            String
+  refreshToken          String?
+  refreshTokenExpiresAt DateTime?
+  updatedAt             DateTime  @updatedAt
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("account")
+}
+
+model Verification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([identifier])
+  @@map("verification")
+}
+
+model Agent {
+  id       String  @id @default(uuid())
+  name     String
+  email    String
+  phone    String
+  location String?
+  userId   String  @unique
+  user     User    @relation(fields: [userId], references: [id])
+  orders   Order[]
+}
+
+model Booking {
+  id            Int             @id @default(autoincrement())
+  serviceId     Int
+  providerId    Int
+  userId        String
+  name          String
+  email         String
+  phone         String
+  location      String
+  preferredDate DateTime?
+  message       String?
+  fee           Decimal         @db.Decimal(10, 2)
+  status        BookingStatus   @default(REQUESTED)
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  provider      ServiceProvider @relation(fields: [providerId], references: [id])
+  service       Service         @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  user          User            @relation(fields: [userId], references: [id])
+  review        ServiceReview?
+
+  @@index([userId])
+  @@index([providerId])
+  @@index([serviceId])
+  @@index([status])
+}
+
+model ProductReview {
+  id        Int      @id @default(autoincrement())
+  rating    Int
+  comment   String?
+  userId    String
+  productId Int
+  orderId   Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, productId])
+  @@index([productId])
+  @@index([userId])
+  @@index([orderId])
+}
+
+model ServiceReview {
+  id         Int             @id @default(autoincrement())
+  rating     Int
+  comment    String?
+  userId     String
+  serviceId  Int
+  providerId Int
+  bookingId  Int             @unique
+  createdAt  DateTime        @default(now())
+  updatedAt  DateTime        @updatedAt
+  booking    Booking         @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  provider   ServiceProvider @relation(fields: [providerId], references: [id], onDelete: Cascade)
+  service    Service         @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  user       User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([serviceId])
+  @@index([providerId])
+}
+
+model Banner {
+  id        String   @id @default(uuid())
+  imageUrl  String
+  createdAt DateTime @default(now())
+}
+
+model ParentOrder {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  quantity  Int
+  cost      Decimal  @db.Decimal(10, 2)
+  userId    String
+  orders    Order[]
+  user      User     @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+}
+
+enum Status {
+  PENDING
+  PROCESSING
+  CANSELLED
+  DELIVERED
+}
+
+enum Role {
+  ADMIN
+  AGENT
+  BASIC
+}
+
+enum BookingStatus {
+  REQUESTED
+  ACCEPTED
+  CANCELLED
+  COMPLETED
+}
+
+model PushSubscription {
+  id        Int      @id @default(autoincrement())
+  endpoint  String   @unique
+  p256dh    String
+  auth      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+enum NotificationType {
+  ORDER
+  DELIVERY
+  BOOKING
+  SERVICE
+  PRODUCT
+  SYSTEM
+}
+
+model Notification {
+  id     Int    @id @default(autoincrement())
+  userId String
+
+  title   String
+  message String
+
+  type   NotificationType
+  isRead Boolean          @default(false)
+
+  entityType String?
+  entityId   String?
+
+  createdAt DateTime  @default(now())
+  readAt    DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, isRead])
+  @@index([userId, createdAt])
+}

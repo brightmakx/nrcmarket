@@ -1,0 +1,214 @@
+.edit-service-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.edit-service-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.edit-service-header {
+    margin-bottom: 30px;
+}
+
+.edit-service-header h1 {
+    margin: 15px 0 8px;
+}
+
+.edit-service-header p {
+    color: #666;
+}
+
+.back-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.edit-service-form {
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.edit-service-form .form-group {
+    margin-bottom: 22px;
+}
+
+.edit-service-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.edit-service-form input,
+.edit-service-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.edit-service-form textarea {
+    resize: vertical;
+}
+
+.edit-service-form small {
+    display: block;
+    margin-top: 6px;
+    color: #777;
+}
+
+.edit-service-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.cancel-button,
+.save-service-button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cancel-button {
+    background: #eee;
+}
+
+.save-service-button {
+    background: #16a34a;
+    color: white;
+}
+
+.save-service-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.edit-service-error {
+    background: #fff1f2;
+    color: #dc2626;
+    padding: 12px;
+    border-radius: 8px;
+}
+/* =====================================================
+   SERVICE MEDIA
+   ===================================================== */
+
+.service-media-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(220px, 1fr)
+    );
+    gap: 20px;
+    margin-top: 12px;
+}
+
+.service-media-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.service-media-item img,
+.service-media-item video {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f3f3f3;
+}
+
+.service-media-item video {
+    object-fit: contain;
+}
+
+/* Delete button */
+
+.delete-media-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #dc2626;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease;
+}
+
+.delete-media-button:hover {
+    background: #b91c1c;
+}
+
+.delete-media-button:active {
+    transform: scale(0.98);
+}
+
+.delete-media-button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* Empty media message */
+
+.service-media-grid p {
+    margin: 0;
+    padding: 20px;
+
+    border: 1px dashed #ccc;
+    border-radius: 10px;
+
+    color: #666;
+    text-align: center;
+}
+
+/* =====================================================
+   RESPONSIVE MEDIA
+   ===================================================== */
+
+@media (max-width: 700px) {
+    .service-media-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .service-media-item img,
+    .service-media-item video {
+        height: 220px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+    .service-media-grid {
+        grid-template-columns: repeat(
+            2,
+            minmax(0, 1fr)
+        );
+    }
+}

@@ -1,0 +1,75 @@
+.category-home {
+    min-height: 100vh;
+    padding-bottom: 50px;
+    background-color: rgb(235, 237, 240);
+    border-radius: 8px;
+}
+
+.first {
+    padding: 4px;
+}
+
+.categoriesHome {
+    width: calc(100% - 60px);
+    margin: 30px auto 0;
+    padding: 20px 0 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#head {
+    margin: 5px 0 20px;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .categoriesHome {
+        width: calc(100% - 40px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .categoriesHome {
+        width: calc(100% - 25px);
+        margin-top: 20px;
+        padding: 15px 0 25px;
+    }
+
+    #head {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .categoriesHome {
+        width: calc(100% - 20px);
+        padding: 12px 0 20px;
+    }
+
+    #head {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,328 @@
+/* =========================================================
+SITE FOOTER
+========================================================= */
+
+.site-footer {
+    width: 100%;
+    margin-top: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b2418 0%,
+            #123a26 55%,
+            #0b2418 100%
+        );
+
+    color: #ffffff;
+
+    border-top: 1px solid rgba(77, 190, 117, 0.18);
+}
+
+
+/* =========================================================
+FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+    padding: 55px 24px 50px;
+
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+
+    gap: 45px;
+}
+
+
+/* =========================================================
+BRAND
+========================================================= */
+
+.footer-brand {
+    max-width: 340px;
+}
+
+.footer-logo {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-logo:hover {
+    color: #70d49a;
+}
+
+.footer-brand p {
+    margin: 0;
+
+    color: #a9c5b3;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+FOOTER COLUMNS
+========================================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+.footer-column h4 {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footer-column a {
+    width: fit-content;
+
+    color: #a9c5b3;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #70d49a;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    width: 100%;
+
+    background: rgba(4, 19, 12, 0.35);
+
+    border-top: 1px solid rgba(112, 212, 154, 0.12);
+}
+
+.footer-bottom-container {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+    padding: 20px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #789786;
+
+    font-size: 13px;
+}
+
+.footer-bottom-links {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+.footer-bottom-links a {
+    color: #789786;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #70d49a;
+}
+
+
+/* =========================================================
+SUBTLE BRAND ACCENT
+========================================================= */
+
+.footer-brand::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    margin-top: 22px;
+
+    border-radius: 10px;
+
+    background: #4fc77f;
+}
+
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .footer-container {
+        grid-template-columns: 2fr repeat(3, 1fr);
+
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+
+        max-width: 420px;
+    }
+}
+
+
+/* =========================================================
+SMALL TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .footer-container {
+        padding: 45px 18px;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px 25px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    .footer-logo {
+        font-size: 27px;
+    }
+
+    .footer-bottom-container {
+        padding: 18px;
+    }
+}
+
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .site-footer {
+        margin-top: 25px;
+    }
+
+    .footer-container {
+        padding: 40px 15px;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 30px 18px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    .footer-brand p {
+        font-size: 13px;
+    }
+
+    .footer-column {
+        gap: 9px;
+    }
+
+    .footer-column h4 {
+        font-size: 14px;
+    }
+
+    .footer-column a {
+        font-size: 13px;
+    }
+
+    .footer-bottom-container {
+        padding: 16px 15px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+}
+
+
+/* =========================================================
+VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 370px) {
+
+    .footer-container {
+        padding: 35px 12px;
+
+        gap: 28px 14px;
+    }
+
+    .footer-logo {
+        font-size: 25px;
+    }
+
+    .footer-column h4 {
+        font-size: 13px;
+    }
+
+    .footer-column a {
+        font-size: 12px;
+    }
+
+    .footer-bottom-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .footer-bottom p,
+    .footer-bottom-links a {
+        font-size: 11px;
+    }
+}

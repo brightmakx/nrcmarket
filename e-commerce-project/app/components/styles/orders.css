@@ -1,0 +1,772 @@
+
+/* ==========================================
+   ORDERS PAGE
+========================================== */
+
+.orders-page {
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 20px;
+}
+
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.orders-header {
+    margin-bottom: 20px;
+}
+
+.orders-header h2 {
+    margin: 0;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    text-transform: capitalize;
+}
+
+.orders-header p {
+    margin-top: 5px;
+
+    color: rgb(105, 105, 105);
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   ORDERS LIST
+========================================== */
+
+.orders-list {
+    width: 100%;
+
+    max-width: 900px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* ==========================================
+   ORDER CARD
+========================================== */
+
+.order-card {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    border: 1px solid rgb(225, 225, 225);
+
+    box-shadow:
+        3px 3px 8px rgba(0, 0, 0, 0.05),
+        -2px -2px 8px rgba(0, 0, 0, 0.02);
+
+    transition: all 0.25s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        4px 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================
+   ORDER HEADER
+========================================== */
+
+.order-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.order-label {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 12px;
+
+    color: rgb(120, 120, 120);
+}
+
+.order-top h3 {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: rgb(35, 35, 35);
+}
+
+
+/* ==========================================
+   ORDER STATUS
+========================================== */
+
+.order-status {
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-transform: capitalize;
+
+    background-color: rgb(235, 238, 238);
+
+    color: rgb(70, 70, 70);
+}
+
+
+/* ==========================================
+   PROCESSING
+========================================== */
+
+.order-status.processing {
+    background-color: rgb(225, 238, 255);
+
+    color: rgb(35, 95, 165);
+}
+
+
+/* ==========================================
+   COMPLETED
+========================================== */
+
+.order-status.completed {
+    background-color: rgb(222, 245, 232);
+
+    color: rgb(3, 125, 70);
+}
+
+
+/* ==========================================
+   DELIVERED
+========================================== */
+
+.order-status.delivered {
+    background-color: rgb(222, 245, 232);
+
+    color: rgb(3, 125, 70);
+}
+
+
+/* ==========================================
+   PENDING
+========================================== */
+
+.order-status.pending {
+    background-color: rgb(255, 244, 214);
+
+    color: rgb(150, 100, 0);
+}
+
+
+/* ==========================================
+   CANCELLED
+========================================== */
+
+.order-status.cancelled {
+    background-color: rgb(255, 225, 225);
+
+    color: rgb(180, 35, 35);
+}
+
+
+/* ==========================================
+   ORDER INFORMATION
+========================================== */
+
+.order-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.order-info-item {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.order-info-item span {
+    font-size: 12px;
+
+    color: rgb(120, 120, 120);
+}
+
+.order-info-item strong {
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color: rgb(40, 40, 40);
+}
+
+
+/* ==========================================
+   SELLER ORDERS
+========================================== */
+
+.seller-orders {
+    padding-top: 15px;
+}
+
+.seller-order {
+    padding: 15px 0;
+
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+
+.seller-order:last-child {
+    border-bottom: none;
+}
+
+
+/* ==========================================
+   SELLER ORDER HEADER
+========================================== */
+
+.seller-order-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding-bottom: 12px;
+}
+
+.seller-label {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 11px;
+
+    color: rgb(120, 120, 120);
+
+    text-transform: uppercase;
+}
+
+.seller-order-top h4 {
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: rgb(40, 40, 40);
+}
+
+
+/* ==========================================
+   SELLER ORDER INFORMATION
+========================================== */
+
+.seller-order-info {
+    display: flex;
+
+    gap: 35px;
+
+    padding-bottom: 12px;
+}
+
+
+/* ==========================================
+   PRODUCTS SECTION
+========================================== */
+
+.ordered-products {
+    padding-top: 15px;
+}
+
+.ordered-products h4 {
+    margin: 0 0 12px 0;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: rgb(45, 45, 45);
+}
+
+
+/* ==========================================
+   SELLER PRODUCTS
+========================================== */
+
+.seller-order .ordered-products {
+    padding-top: 5px;
+}
+
+.seller-order .ordered-products h4 {
+    margin-bottom: 5px;
+}
+
+
+/* ==========================================
+   ORDERED PRODUCT
+========================================== */
+
+.ordered-product {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+.ordered-product:last-child {
+    border-bottom: none;
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE
+========================================== */
+
+.ordered-product-image {
+    width: 80px;
+
+    height: 80px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+
+    background-color: rgb(240, 240, 240);
+}
+
+.ordered-product-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.25s ease;
+}
+
+.ordered-product-image img:hover {
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   PRODUCT DETAILS
+========================================== */
+
+.ordered-product-details {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.ordered-product-details h5 {
+    margin: 0 0 5px 0;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: rgb(40, 40, 40);
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.ordered-product-details span {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 13px;
+
+    color: rgb(120, 120, 120);
+}
+
+.ordered-product-price {
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: rgb(3, 125, 70);
+}
+
+
+/* ==========================================
+   PRODUCT TOTAL
+========================================== */
+
+.ordered-product-total {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 4px;
+
+    white-space: nowrap;
+}
+
+.ordered-product-total span {
+    font-size: 12px;
+
+    color: rgb(130, 130, 130);
+}
+
+.ordered-product-total strong {
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color: rgb(45, 45, 45);
+}
+
+
+/* ==========================================
+   EMPTY ORDERS
+========================================== */
+
+.empty-orders {
+    width: 100%;
+
+    max-width: 600px;
+
+    box-sizing: border-box;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    border: 1px solid rgb(225, 225, 225);
+
+    box-shadow:
+        3px 3px 8px rgba(0, 0, 0, 0.04);
+}
+
+.empty-orders h3 {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+.empty-orders p {
+    margin-top: 7px;
+
+    color: rgb(110, 110, 110);
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.orders-error {
+    width: 100%;
+
+    max-width: 600px;
+
+    box-sizing: border-box;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    border: 1px solid rgb(235, 200, 200);
+}
+
+.orders-error h2 {
+    margin: 0;
+
+    font-size: 20px;
+}
+
+.orders-error p {
+    color: rgb(120, 120, 120);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 700px) {
+
+    .orders-page {
+        padding: 15px;
+    }
+
+    .orders-header h2 {
+        font-size: 22px;
+    }
+
+    .order-card {
+        padding: 15px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 420px) {
+
+    .orders-page {
+        padding: 10px;
+    }
+
+
+    .orders-header {
+        margin-bottom: 12px;
+    }
+
+
+    .orders-header h2 {
+        font-size: 20px;
+    }
+
+
+    .orders-header p {
+        font-size: 13px;
+    }
+
+
+    .order-card {
+        padding: 12px;
+
+        border-radius: 8px;
+    }
+
+
+    .order-top h3 {
+        font-size: 17px;
+    }
+
+
+    /*
+       STATUS FONT LEFT UNCHANGED
+    */
+
+    .order-status {
+        padding: 4px 8px;
+
+        font-size: 11px;
+    }
+
+
+    .order-info {
+        gap: 5px;
+
+        padding: 12px 0;
+    }
+
+
+    .order-info-item span {
+        font-size: 11px;
+    }
+
+
+    .order-info-item strong {
+        font-size: 13px;
+    }
+
+
+    /* ==========================================
+       SELLER ORDERS MOBILE
+    ========================================== */
+
+    .seller-order {
+        padding: 12px 0;
+    }
+
+    .seller-order-top h4 {
+        font-size: 14px;
+    }
+
+    .seller-order-info {
+        gap: 20px;
+    }
+
+
+    .ordered-products {
+        padding-top: 12px;
+    }
+
+
+    .ordered-products h4 {
+        font-size: 15px;
+    }
+
+
+    .ordered-product {
+        gap: 10px;
+
+        padding: 11px 0;
+    }
+
+
+    /* Larger mobile image */
+
+    .ordered-product-image {
+        width: 65px;
+
+        height: 65px;
+
+        border-radius: 8px;
+    }
+
+
+    .ordered-product-details h5 {
+        font-size: 14px;
+    }
+
+
+    .ordered-product-price {
+        font-size: 13px;
+    }
+
+
+    .ordered-product-details span {
+        font-size: 12px;
+    }
+
+
+    .ordered-product-total span {
+        font-size: 10px;
+    }
+
+
+    .ordered-product-total strong {
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==========================================
+   VERY SMALL PHONES
+========================================== */
+
+@media (max-width: 370px) {
+
+    .orders-page {
+        padding: 7px;
+    }
+
+
+    .order-card {
+        padding: 10px;
+    }
+
+
+    .order-top h3 {
+        font-size: 16px;
+    }
+
+
+    .ordered-product {
+        gap: 8px;
+    }
+
+
+    /* Larger image than before,
+       but still fits small screens */
+
+    .ordered-product-image {
+        width: 58px;
+
+        height: 58px;
+    }
+
+
+    .ordered-product-details h5 {
+        font-size: 13px;
+    }
+
+
+    .ordered-product-price {
+        font-size: 12px;
+    }
+
+
+    .ordered-product-details span {
+        font-size: 11px;
+    }
+
+
+    .ordered-product-total strong {
+        font-size: 12px;
+    }
+
+}
+

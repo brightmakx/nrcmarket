@@ -1,0 +1,88 @@
+/*@import "tailwindcss";*/
+
+@media(min-width: 370px) {
+    body{
+    scrollbar-width: none;
+    background-color: rgba(250, 244, 235, 0.466);
+}
+.Top{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10000000000000000;
+}
+.menu-tab{
+    background-color: rgb(184, 181, 181);
+    z-index: 10000000000;
+    display: flex;  
+
+}
+.menu-tab span{
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.menu-tab span:hover{
+    background-color: rgb(235, 199, 199);
+}
+}
+
+
+@media(max-width: 370px) {
+    body{
+    scrollbar-width: none;
+    background-color: rgba(250, 244, 235, 0.466);
+}
+.Top{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10000000000000000;
+}
+.menu-tab{
+    background-color: rgb(184, 181, 181);
+    z-index: 10000000000;
+    display: flex;  
+
+}
+.menu-tab span{
+    margin-right: 7px;
+    margin-left: 5px;
+}
+.menu-tab span:hover{
+    background-color: rgb(235, 199, 199);
+    
+}
+}
+
+
+#fm{
+    margin-top: 80px;
+}
+
+.page-content {
+    padding-top: 120px;
+}
+
+@media (max-width: 900px) {
+    .page-content {
+        padding-top: 110px;
+    }
+}
+
+@media (max-width: 700px) {
+    .page-content {
+        padding-top: 103px;
+    }
+}
+
+@media (max-width: 420px) {
+    .page-content {
+        padding-top: 94px;
+    }
+}
+
+@media (max-width: 370px) {
+    .page-content {
+        padding-top: 91px;
+    }
+}

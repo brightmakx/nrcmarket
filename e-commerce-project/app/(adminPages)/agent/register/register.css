@@ -1,0 +1,124 @@
+
+.agent-register-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #f7f9f7;
+}
+
+.agent-register-card {
+    width: 100%;
+    max-width: 520px;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #e4e9e5;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.agent-register-heading {
+    margin-bottom: 28px;
+}
+
+.agent-register-heading h1 {
+    margin: 0 0 10px;
+    color: #176b3a;
+    font-size: 27px;
+}
+
+.agent-register-heading p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.agent-register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.agent-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.agent-form-field label {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.agent-form-field input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d5ddd7;
+    border-radius: 7px;
+    outline: none;
+    font: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.agent-form-field input:focus {
+    border-color: #176b3a;
+}
+
+.agent-field-error {
+    color: #c62828;
+    font-size: 12px;
+}
+
+.agent-form-message {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.agent-form-message.success {
+    color: #176b3a;
+}
+
+.agent-form-message.failure {
+    color: #c62828;
+}
+
+.agent-register-form button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #176b3a;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.agent-register-form button:hover {
+    background: #12552e;
+}
+
+.agent-register-form button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .agent-register-page {
+        padding: 24px 14px;
+    }
+
+    .agent-register-card {
+        padding: 24px 18px;
+    }
+
+    .agent-register-heading h1 {
+        font-size: 23px;
+    }
+}

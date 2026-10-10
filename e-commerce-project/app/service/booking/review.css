@@ -1,0 +1,67 @@
+.service-review-form {
+    margin-top: 0;
+    padding: 0;
+}
+
+.service-review-form h3 {
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+
+.review-stars {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.review-stars button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.review-stars .star {
+    color: #d1d5db;
+}
+
+.review-stars .star.filled {
+    color: #f5b301;
+}
+
+.service-review-form textarea {
+    width: 100%;
+    min-height: 110px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    resize: vertical;
+    font: inherit;
+    margin-bottom: 12px;
+}
+
+.service-review-form textarea:focus {
+    outline: none;
+    border-color: #22c55e;
+}
+
+.service-review-form > button {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    background: #22c55e;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.service-review-form > button:hover {
+    background: #16a34a;
+}
+
+.service-review-form > button:disabled,
+.review-stars button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

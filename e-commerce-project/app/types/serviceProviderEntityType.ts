@@ -1,0 +1,1 @@
+export type serviceProviderEntityType={availability?:string,name:string,rating:number,location:string,phone:string,email:string,serviceId?:number,userId:string,title?:string,images?:[]}

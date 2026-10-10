@@ -1,0 +1,116 @@
+.category-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px 24px 40px;
+    box-sizing: border-box;
+}
+
+.category-container h1 {
+    margin: 0 0 18px;
+    padding: 8px 14px;
+
+    background-color: rgba(81, 81, 182, 0.486);
+    border-radius: 4px;
+
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+}
+
+.category-container .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 18px;
+    width: 100%;
+}
+
+.category-container .product {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.category-container .product-image {
+    width: 100%;
+}
+
+.category-container .product-details {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.category-container .product-details select,
+.category-container .product-details .add-to-cart {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .category-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .category-container .products {
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+        gap: 14px;
+    }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .category-container {
+        padding: 16px 12px 35px;
+    }
+
+    .category-container .products {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .category-container {
+        padding: 14px 8px 30px;
+    }
+
+    .category-container .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 370px) {
+
+    .category-container {
+        padding: 10px 5px 25px;
+    }
+
+    .category-container .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+}
